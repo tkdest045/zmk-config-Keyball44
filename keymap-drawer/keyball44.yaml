@@ -43,7 +43,7 @@ layers:
   - {t: '$$mdi:keyboard-space$$', h: SYM}
   - {t: 'Gui+$$mdi:keyboard-space$$', h: NUM}
   - {t: '$$mdi:backspace-reverse-outline$$', h: NUM}
-  - {t: 'Gui+$$mdi:keyboard-return$$', h: SYM}
+  - {t: '$$mdi:keyboard-return$$', h: SYM}
   - {t: MOUSE, h: toggle}
   NUM:
   - {t: '`', s: '~'}
@@ -82,8 +82,8 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - Sft+Gui+$$mdi:keyboard-tab$$
-  - Gui+$$mdi:keyboard-tab$$
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {type: held}
