@@ -56,40 +56,40 @@
         default_layer {
             label = "QWRT";
             bindings = <
-&kp ESCAPE        &kp Q         &kp W         &kp E        &kp R            &kp T                  &kp Y        &kp U  &kp I      &kp O    &kp P      &kp BACKSPACE
-&kp TAB           &kp A         &kp S         &kp D        &kp F            &kp G                  &kp H        &kp J  &kp K      &kp L    &kp COLON  &kp SQT
-&kp LEFT_SHIFT    &kp Z         &kp X         &kp C        &kp V            &kp B                  &kp N        &kp M  &kp COMMA  &kp DOT  &kp SLASH  &kp ENTER
-&kp LEFT_CONTROL  &kp LEFT_ALT  &kp LEFT_GUI  &lt 1 SPACE  &lt 3 LG(SPACE)             &kp DELETE  &lt 1 ENTER                                        &to 3
+&kp ESCAPE        &kp Q         &kp W         &kp E      &kp R  &kp T             &kp Y  &kp U  &kp I      &kp O    &kp P      &kp BACKSPACE
+&kp TAB           &kp A         &kp S         &kp D      &kp F  &kp G             &kp H  &kp J  &kp K      &kp L    &kp COLON  &kp SQT
+&kp LEFT_SHIFT    &kp Z         &kp X         &kp C      &kp V  &kp B             &kp N  &kp M  &kp COMMA  &kp DOT  &kp SLASH  &kp ENTER
+&kp LEFT_CONTROL  &kp LEFT_ALT  &kp LEFT_GUI  &kp SPACE  &mo 3             &mo 2  &mo 1                                        &to 3
             >;
         };
 
         number_layer {
             label = "NUM";
             bindings = <
-&kp GRAVE  &kp NUMBER_1  &kp NUMBER_2     &kp NUMBER_3    &kp NUMBER_4     &kp NUMBER_5              &kp NUMBER_6  &kp NUMBER_7   &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_0       &trans
-&none      &none         &kp LC(LS(TAB))  &kp UP_ARROW    &kp LC(TAB)      &none                     &none         &kp SEMICOLON  &kp COLON     &kp SQT       &kp DOUBLE_QUOTES  &kp PIPE
-&none      &none         &kp LEFT_ARROW   &kp DOWN_ARROW  &kp RIGHT_ARROW  &none                     &none         &none          &none         &none         &none              &none
-&none      &none         &trans           &trans          &trans                             &trans  &trans                                                                      &trans
+&kp GRAVE  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_5             &kp NUMBER_6  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9      &kp NUMBER_0       &kp DELETE
+&none      &none         &none         &none         &none         &none                    &none         &kp MINUS     &kp EQUAL     &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp BACKSLASH
+&none      &none         &none         &none         &none         &none                    &none         &none         &none         &none             &none              &none
+&none      &none         &kp LEFT_GUI  &kp SPACE     &none                           &none  &mo 1                                                                          &trans
             >;
         };
 
         symbol_layer {
             label = "SYM";
             bindings = <
-&kp TILDE  &kp EXCLAMATION  &kp AT_SIGN   &kp HASH      &kp DOLLAR    &kp PERCENT               &kp CARET   &kp AMPERSAND   &kp ASTERISK  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &trans
-&none      &kp NUMBER_1     &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_5              &kp SLASH   &kp MINUS       &kp PLUS      &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp BACKSLASH
-&none      &kp NUMBER_6     &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_0              &kp PERIOD  &kp UNDERSCORE  &kp EQUAL     &kp LEFT_BRACE        &kp RIGHT_BRACE        &none
-&none      &none            &trans        &trans        &trans                          &trans  &trans                                                                                 &trans
+&kp TILDE  &kp EXCLAMATION  &kp AT_SIGN   &kp HASH   &kp DOLLAR  &kp PERCENT             &kp CARET  &kp AMPERSAND   &kp ASTERISK  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp DEL
+&none      &none            &none         &none      &none       &none                   &none      &kp UNDERSCORE  &kp PLUS      &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp PIPE
+&none      &none            &none         &none      &none       &none                   &none      &none           &none         &none                 &none                  &none
+&none      &none            &kp LEFT_GUI  &kp SPACE  &trans                       &mo 2  &none                                                                                 &trans
             >;
         };
 
         mouse_layer {
             label = "MOUSE";
             bindings = <
-&trans        &none         &none                 &none                  &none           &none                        &bt BT_SEL 0  &kp LG(LEFT_BRACKET)  &msc SCRL_UP    &kp LG(RIGHT_BRACKET)  &none  &trans
-&trans        &none         &kp LG(LS(TAB))       &kp UP_ARROW           &kp UP_ARROW    &kp PG_UP                    &none         &msc SCRL_LEFT        &msc SCRL_DOWN  &msc SCRL_RIGHT        &none  &none
-&trans        &none         &kp LEFT_SHIFT        &kp LEFT_ARROW         &kp DOWN_ARROW  &kp RIGHT_ARROW              &none         &mkp LCLK             &mkp MCLK       &mkp RCLK              &none  &none
-&kp LEFT_ALT  &kp LEFT_GUI  &kp LG(LEFT_BRACKET)  &kp LG(RIGHT_BRACKET)  &mo 3                                &trans  &kp SPACE                                                                         &to 0
+&trans        &none         &none                 &none                  &none           &none                        &bt BT_SEL 0   &none           &msc SCRL_UP    &none            &none  &trans
+&trans        &none         &kp GRAVE             &kp LC(LS(TAB))        &kp UP_ARROW    &kp LC(TAB)                  &none          &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_RIGHT  &none  &kp C_VOLUME_UP
+&trans        &none         &kp LEFT_SHIFT        &kp LEFT_ARROW         &kp DOWN_ARROW  &kp RIGHT_ARROW              &none          &mkp LCLK       &mkp MCLK       &mkp RCLK        &none  &kp C_VOLUME_DOWN
+&kp LEFT_ALT  &kp LEFT_GUI  &kp LG(LEFT_BRACKET)  &kp LG(RIGHT_BRACKET)  &mo 3                                &trans  &kp LG(SPACE)                                                          &kp C_MUTE
             >;
         };
     };
