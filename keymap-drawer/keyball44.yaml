@@ -4,7 +4,7 @@ layers:
   - $$mdi:keyboard-esc$$
   - Q
   - W
-  - {t: E, h: Sft+Gui+3}
+  - '3'
   - {t: R, h: Sft+Gui+4}
   - {t: T, h: Sft+Gui+5}
   - Y
