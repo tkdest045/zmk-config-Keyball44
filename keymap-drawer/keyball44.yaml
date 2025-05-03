@@ -44,7 +44,7 @@ layers:
   - MOUSE
   - SYM
   - NUM
-  - {t: MOUSE, h: toggle}
+  - Gui+$$mdi:keyboard-space$$
   NUM:
   - {t: '`', s: '~'}
   - '1'
@@ -70,7 +70,7 @@ layers:
   - {t: '[', s: '{'}
   - {t: ']', s: '}'}
   - {t: \, s: '|'}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - $$mdi:apple-keyboard-shift$$
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
