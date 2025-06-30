@@ -13,7 +13,7 @@ layers:
   - O
   - P
   - {t: '$$mdi:backspace$$', type: backspace}
-  - $$mdi:keyboard-tab$$
+  - '&tab_capslock'
   - A
   - S
   - D
@@ -25,7 +25,7 @@ layers:
   - L
   - ':'
   - {t: '''', s: '"'}
-  - $$mdi:apple-keyboard-shift$$
+  - '&shift_control'
   - Z
   - X
   - C
@@ -40,12 +40,12 @@ layers:
   - $$mdi:apple-keyboard-control$$
   - $$mdi:apple-keyboard-option$$
   - $$mdi:apple-keyboard-command$$
-  - $$mdi:keyboard-space$$
-  - MOUSE
-  - SYM
-  - NUM
+  - {t: '$$mdi:keyboard-space$$', h: Layer3}
+  - Layer2
+  - Layer1
+  - {t: '$$mdi:keyboard-return$$', type: enter}
   - Gui+Ctl+$$mdi:volume-off$$
-  NUM:
+  Layer1:
   - {t: '`', s: '~'}
   - '1'
   - '2'
@@ -87,10 +87,10 @@ layers:
   - $$mdi:apple-keyboard-command$$
   - $$mdi:keyboard-space$$
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: NUM, type: held}
+  - {t: '$$mdi:minus-circle-outline$$', type: held}
+  - Layer1
   - {t: '$$mdi:transfer$$', type: trans}
-  SYM:
+  Layer2:
   - '~'
   - '!'
   - '@'
@@ -104,11 +104,23 @@ layers:
   - )
   - $$mdi:backspace-reverse-outline$$
   - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - '1'
+  - '2'
+  - '3'
+  - '4'
+  - {t: '5', s: '%'}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '-', s: _}
+  - {t: '=', s: +}
+  - {t: '[', s: '{'}
+  - {t: ']', s: '}'}
+  - {t: \, s: '|'}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - Sft+$$mdi:arrow-up-bold$$
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - '6'
+  - {t: '7', s: '&'}
+  - {t: '8', s: '*'}
+  - {t: '9', s: (}
+  - {t: '0', s: )}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - _
   - +
@@ -117,25 +129,13 @@ layers:
   - '|'
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - Sft+$$mdi:arrow-left-bold$$
-  - Sft+$$mdi:arrow-down-bold$$
-  - Sft+$$mdi:arrow-right-bold$$
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
   - $$mdi:apple-keyboard-command$$
   - $$mdi:keyboard-space$$
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: SYM, type: held}
+  - {type: held}
+  - Gui+$$mdi:keyboard-space$$
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:transfer$$', type: trans}
-  MOUSE:
+  Layer3:
   - {h: '1', s: '$$mdi:bluetooth-connect$$'}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: Gui+`, s: Gui+~}
@@ -175,8 +175,8 @@ layers:
   - $$mdi:apple-keyboard-control$$
   - $$mdi:apple-keyboard-option$$
   - {t: Z, h: '$$mdi:apple-keyboard-command$$'}
-  - Gui+Sft+Z
-  - {t: MOUSE, type: held}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: Layer3, type: held}
+  - Layer3
+  - Gui+$$mdi:keyboard-space$$
   - Gui+$$mdi:keyboard-space$$
   - Ctl+Gui+Q
