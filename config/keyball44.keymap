@@ -62,6 +62,13 @@
             #binding-cells = <0>;
             bindings = <&kp TAB>, <&kp CAPSLOCK>;
         };
+
+        mute_quit: mute_quit {
+            compatible = "zmk,behavior-tap-dance";
+            label = "MUTE_QUIT";
+            #binding-cells = <0>;
+            bindings = <&kp C_MUTE>, <&none>, <&kp LC(LG(Q))>;
+        };
     };
 
     keymap {
@@ -70,40 +77,49 @@
         default_layer {
             label = "QWRT";
             bindings = <
-&kp ESCAPE        &kp Q         &kp W         &kp E        &kp R  &kp T             &kp Y      &kp U  &kp I      &kp O    &kp P      &kp BACKSPACE
-&tab_capslock     &kp A         &kp S         &kp D        &kp F  &kp G             &kp H      &kp J  &kp K      &kp L    &kp COLON  &kp SQT
-&shift_control    &kp Z         &kp X         &kp C        &kp V  &kp B             &kp N      &kp M  &kp COMMA  &kp DOT  &kp SLASH  &kp ENTER
-&kp LEFT_CONTROL  &kp LEFT_ALT  &kp LEFT_GUI  &lt 3 SPACE  &mo 2             &mo 1  &kp ENTER                                        &kp LG(LC(C_MUTE))
+&kp ESCAPE        &kp Q         &kp W         &kp E        &kp R  &kp T             &kp Y        &kp U  &kp I      &kp O    &kp P      &kp BACKSPACE
+&tab_capslock     &kp A         &kp S         &kp D        &kp F  &kp G             &kp H        &kp J  &kp K      &kp L    &kp COLON  &kp SQT
+&kp LEFT_SHIFT    &kp Z         &kp X         &kp C        &kp V  &kp B             &kp N        &kp M  &kp COMMA  &kp DOT  &kp SLASH  &kp LEFT_SHIFT
+&kp LEFT_CONTROL  &kp LEFT_ALT  &kp LEFT_GUI  &lt 3 SPACE  &mo 2             &mo 1  &lt 4 ENTER                                        &mute_quit
             >;
         };
 
         layer_1 {
             label = "Layer1";
             bindings = <
-&kp GRAVE       &kp NUMBER_1  &kp NUMBER_2    &kp NUMBER_3    &kp NUMBER_4     &kp NUMBER_5             &kp NUMBER_6  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9      &kp NUMBER_0       &kp DELETE
-&none           &none         &none           &kp UP          &none            &none                    &none         &kp MINUS     &kp EQUAL     &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp BACKSLASH
-&kp LEFT_SHIFT  &none         &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &none                    &none         &none         &none         &none             &none              &none
-&none           &none         &kp LEFT_GUI    &kp SPACE       &none                              &none  &mo 1                                                                          &trans
+&kp GRAVE       &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_5             &kp NUMBER_6  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_0  &kp DELETE
+&kp LG(GRAVE)   &kp LG(A)     &kp LG(S)     &kp LG(D)     &kp LG(F)     &kp LG(G)                &none         &none         &none         &none         &none         &none
+&kp LEFT_SHIFT  &kp LG(Z)     &kp LG(X)     &kp LG(C)     &kp LG(V)     &kp LG(B)                &none         &none         &none         &none         &none         &none
+&none           &none         &kp LEFT_GUI  &kp SPACE     &none                           &mo 1  &none                                                                 &trans
             >;
         };
 
         layer_2 {
             label = "Layer2";
             bindings = <
-&kp TILDE  &kp EXCLAMATION  &kp AT_SIGN   &kp HASH      &kp DOLLAR    &kp PERCENT                     &kp CARET  &kp AMPERSAND   &kp ASTERISK  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp DEL
-&none      &kp NUMBER_1     &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp N5                          &none      &kp MINUS       &kp EQUAL     &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp BACKSLASH
-&none      &kp NUMBER_6     &kp N7        &kp N8        &kp N9        &kp N0                          &none      &kp UNDERSCORE  &kp PLUS      &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp PIPE
-&none      &none            &kp LEFT_GUI  &kp SPACE     &trans                         &kp LG(SPACE)  &none                                                                                 &trans
+&kp TILDE  &kp EXCLAMATION  &kp AT_SIGN   &kp HASH      &kp DOLLAR    &kp PERCENT                     &kp CARET      &kp AMPERSAND   &kp ASTERISK  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp DEL
+&none      &kp NUMBER_1     &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp N5                          &none          &kp MINUS       &kp EQUAL     &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp BACKSLASH
+&none      &kp NUMBER_6     &kp N7        &kp N8        &kp N9        &kp N0                          &none          &kp UNDERSCORE  &kp PLUS      &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp PIPE
+&none      &none            &kp LEFT_GUI  &kp SPACE     &trans                         &kp LG(SPACE)  &kp LG(SPACE)                                                                             &trans
             >;
         };
 
         layer_3 {
             label = "Layer3";
             bindings = <
-&bt BT_SEL 0      &none           &kp LG(GRAVE)  &kp LS(LG(NUMBER_3))  &kp LS(LG(NUMBER_4))  &kp LS(LG(NUMBER_5))                     &none          &none           &none           &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &kp C_MUTE
-&bt BT_SEL 1      &none           &none          &kp LC(LS(TAB))       &mkp MCLK             &kp LC(TAB)                              &none          &none           &msc SCRL_UP    &none              &none            &none
-&none             &kp LEFT_SHIFT  &kp LEFT_GUI   &mkp RCLK             &mkp MCLK             &mkp LCLK                                &none          &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_RIGHT    &kp LEFT_GUI     &kp LEFT_SHIFT
-&kp LEFT_CONTROL  &kp LEFT_ALT    &kp LG(Z)      &mo 3                 &mo 3                                           &kp LG(SPACE)  &kp LG(SPACE)                                                                      &kp LC(LG(Q))
+&bt BT_SEL 0      &none         &kp HOME        &kp UP_ARROW    &kp PG_UP        &none                     &none          &none  &kp LC(LS(TAB))       &msc SCRL_UP    &kp LC(TAB)            &kp C_MUTE
+&none             &none         &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &none                     &none          &none  &mkp LCLK             &mkp MCLK       &mkp RCLK              &none
+&kp LEFT_SHIFT    &none         &kp END         &kp DOWN_ARROW  &kp PG_DN        &none                     &none          &none  &kp LG(LEFT_BRACKET)  &msc SCRL_DOWN  &kp LG(RIGHT_BRACKET)  &kp LEFT_SHIFT
+&kp LEFT_CONTROL  &kp LEFT_ALT  &kp LEFT_GUI    &mo 3           &none                       &kp LG(SPACE)  &kp LG(SPACE)                                                                      &kp LC(LG(Q))
+            >;
+        };
+
+        layer_4 {
+            bindings = <
+&bt BT_SEL 1      &none         &kp LS(HOME)        &kp LS(UP_ARROW)    &kp PAGE_UP          &none             &none  &kp HOME  &kp UP_ARROW  &kp PG_UP  &none  &none
+&none             &none         &kp LS(LEFT_ARROW)  &kp LS(DOWN_ARROW)  &kp LS(RIGHT_ARROW)  &none             &none  &kp LEFT  &kp DOWN      &kp RIGHT  &none  &none
+&kp LEFT_SHIFT    &none         &kp LS(END)         &kp LS(DOWN_ARROW)  &kp PAGE_DOWN        &none             &none  &kp END   &kp DOWN      &kp PG_DN  &none  &none
+&kp LEFT_CONTROL  &kp LEFT_ALT  &kp LEFT_GUI        &kp LG(SPACE)       &kp LG(SPACE)                   &none  &mo 4                                            &kp LC(LG(Q))
             >;
         };
     };
