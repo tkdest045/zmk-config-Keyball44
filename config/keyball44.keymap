@@ -117,10 +117,10 @@
 
         layer_4 {
             bindings = <
-&bt BT_SEL 1      &none         &kp LS(HOME)        &kp LS(UP_ARROW)    &kp PAGE_UP          &none             &none  &kp HOME  &kp UP_ARROW  &kp PG_UP  &none  &none
+&none             &none         &kp LS(HOME)        &kp LS(UP_ARROW)    &kp PAGE_UP          &none             &none  &kp HOME  &kp UP_ARROW  &kp PG_UP  &none  &none
 &none             &none         &kp LS(LEFT_ARROW)  &kp LS(DOWN_ARROW)  &kp LS(RIGHT_ARROW)  &none             &none  &kp LEFT  &kp DOWN      &kp RIGHT  &none  &none
 &kp LEFT_SHIFT    &none         &kp LS(END)         &kp LS(DOWN_ARROW)  &kp PAGE_DOWN        &none             &none  &kp END   &kp DOWN      &kp PG_DN  &none  &none
-&kp LEFT_CONTROL  &kp LEFT_ALT  &kp LEFT_GUI        &kp LG(SPACE)       &kp LG(SPACE)                   &none  &mo 4                                            &none
+&kp LEFT_CONTROL  &kp LEFT_ALT  &kp LEFT_GUI        &kp LG(LS(TAB))     &kp LG(TAB)                     &none  &mo 4                                            &none
             >;
         };
     };
