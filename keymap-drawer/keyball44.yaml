@@ -136,7 +136,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {h: '1', s: '$$mdi:bluetooth-connect$$'}
   Layer3:
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: Sft+Gui+3, s: Sft+Gui+#}
   - $$mdi:backspace-reverse-outline$$
   - HOME
   - $$mdi:arrow-up-bold$$
@@ -147,8 +147,8 @@ layers:
   - $$mdi:arrow-up-bold$$
   - PG UP
   - {t: '$$mdi:backspace$$', type: backspace}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - $$mdi:volume-high$$
+  - {t: Sft+Gui+4, s: Sft+Gui+$}
   - $$mdi:apple-keyboard-shift$$
   - $$mdi:arrow-left-bold$$
   - $$mdi:arrow-down-bold$$
@@ -159,8 +159,8 @@ layers:
   - $$mdi:arrow-down-bold$$
   - $$mdi:arrow-right-bold$$
   - $$mdi:apple-keyboard-option$$
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - $$mdi:volume-low$$
+  - {t: Sft+Gui+5, s: Sft+Gui+%}
   - $$mdi:apple-keyboard-shift$$
   - END
   - $$mdi:arrow-down-bold$$
@@ -171,7 +171,7 @@ layers:
   - $$mdi:arrow-down-bold$$
   - PG DN
   - $$mdi:apple-keyboard-control$$
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - MUTE
   - Ctl+Sft+$$mdi:keyboard-tab$$
   - Ctl+$$mdi:keyboard-tab$$
   - $$mdi:apple-keyboard-command$$
