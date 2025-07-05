@@ -113,9 +113,9 @@
         layer_3 {
             label = "Layer3";
             bindings = <
-&none            &kp DELETE      &kp HOME        &kp UP_ARROW    &kp PG_UP        &kp BACKSPACE                        &kp DELETE      &kp HOME  &kp UP_ARROW    &kp PG_UP        &kp BACKSPACE     &none
-&none            &kp LEFT_SHIFT  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp LEFT_ALT                         &kp LEFT_SHIFT  &kp LEFT  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp LEFT_ALT      &none
-&none            &kp LEFT_SHIFT  &kp END         &kp DOWN_ARROW  &kp PG_DN        &kp LEFT_CONTROL                     &kp LEFT_SHIFT  &kp END   &kp DOWN_ARROW  &kp PG_DN        &kp LEFT_CONTROL  &none
+&kp LS(LG(N3))   &kp DELETE      &kp HOME        &kp UP_ARROW    &kp PG_UP        &kp BACKSPACE                        &kp DELETE      &kp HOME  &kp UP_ARROW    &kp PG_UP        &kp BACKSPACE     &kp C_VOLUME_UP
+&kp LS(LG(N4))   &kp LEFT_SHIFT  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp LEFT_ALT                         &kp LEFT_SHIFT  &kp LEFT  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp LEFT_ALT      &kp C_VOLUME_DOWN
+&kp LS(LG(N5))   &kp LEFT_SHIFT  &kp END         &kp DOWN_ARROW  &kp PG_DN        &kp LEFT_CONTROL                     &kp LEFT_SHIFT  &kp END   &kp DOWN_ARROW  &kp PG_DN        &kp LEFT_CONTROL  &kp K_MUTE
 &kp LC(LS(TAB))  &kp LC(TAB)     &kp LEFT_GUI    &mo 3           &none                                  &kp LG(SPACE)  &trans                                                                       &kp LEFT_SHIFT
             >;
         };
